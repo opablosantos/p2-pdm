@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { ScrollView, View, Button, Image, StyleSheet } from 'react-native';
 import { buscarFotosGatos, FotoGato } from '@/backend/services/ChamaAPI';
 
@@ -9,6 +9,10 @@ export default function TabTwoScreen() {
     const novasFotos = await buscarFotosGatos();
     setFotos([...novasFotos, ...fotos]);
   };
+
+  useEffect(() => {
+    handleBuscarFotos();
+  }, []);
 
   return (
     <ScrollView>
