@@ -34,8 +34,8 @@ const estilos = StyleSheet.create({
     marginTop: 50,
   },
   imagem: {
-    width: '100%',
+    width: '80%',
     height: 200,
-    marginBottom: 10,
+    margin: 10,
   },
 });
