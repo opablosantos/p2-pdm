@@ -14,7 +14,7 @@ export interface FotoGato {
 export const buscarFotosGatos = async (): Promise<FotoGato[]> => {
   try {
     const resposta = await axios.get<FotoGato[]>(URL_API);
-    return resposta.data;
+    return resposta.data.slice(0, 5);
   } catch (erro) {
     console.error(erro);
     return [];
